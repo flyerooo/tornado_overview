@@ -31,4 +31,9 @@ if __name__=="__main__":
     import tornado
     io_loop = tornado.ioloop.IOLoop.current()
 
-    io_loop.run_sync(f)
+    # run_sync 可以在运行完某个协程之后停止事件循环
+    # io_loop.run_sync(f)
+
+    import asyncio
+    # asyncio.ensure_future(f)
+    asyncio.get_event_loop().run_until_complete(f())
