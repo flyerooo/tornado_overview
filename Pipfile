@@ -8,8 +8,13 @@ tornado = "*"
 requests = "*"
 "beautifulsoup4" = "*"
 aiomysql = "*"
+peewee = "*"
+peewee-async = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
